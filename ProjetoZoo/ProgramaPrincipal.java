@@ -6,6 +6,8 @@ import ProjetoZoo.Sub_Classes.Insetos.Cerambicideo_gigante;
 import ProjetoZoo.Sub_Classes.Insetos.Opiliao;
 import ProjetoZoo.Sub_Classes.Mamiferos.TamanduaBandeira;
 import ProjetoZoo.Sub_Classes.Mamiferos.TatuCanastra;
+import ProjetoZoo.Sub_Classes.Reptils.Cascavel;
+import ProjetoZoo.Sub_Classes.Reptils.Repetilianos;
 
 public class ProgramaPrincipal {
 
@@ -46,7 +48,44 @@ public class ProgramaPrincipal {
 		tc.setComida("Aranhas e escorpiões");
 		
 		//////////////////////////////////////////////
-		
+		//Cascavel
+		Cascavel cas = new Cascavel();
+		cas.setVeneno(true);
+		cas.setComida("animais pequenos");
+		cas.setNome("carlas a cobra");
+		cas.setExpcVida(65);
+		cas.setCor("verde");
+		cas.setHabitat("Qualquer floresta");
+
+		//////////////////////////////////////////////
+
+		//Reptilianos
+		Repetilianos rep = new Repetilianos();
+		rep.setNome("Michael jackson");
+		rep.setComida("Doritos e bolo");
+		rep.setExpcVida(350);
+		rep.setExtincao(false);
+		rep.setHabitat("Alta sociedade");
+		rep.setVeneno(true);
+		rep.setCor("verde");
+		rep.setDisfarcado(true);
+
+		//////////////////////////////////////////////
+
+		if(entrada.equals("Cascavel")){
+			System.out.println("nome "+ cas.getNome() + "\nCor " + cas.getCor() + "\nComida favorita : " + cas.getComida()
+			+ " \nHabitat natural : " + cas.getHabitat() + "\n expectativa de vida : " + cas.getExpcVida()
+			);
+		}
+
+		if(entrada.equalsIgnoreCase("Reptilianos")){
+			System.out.println("nome "+ rep.getNome() + "\nCor " + rep.getCor() + "\nComida favorita : " + rep.getComida()
+					+ "\n Habitat natural : " + rep.getHabitat() + "\n expectativa de vida : " +
+					rep.getExpcVida()+ "\n o reptiliano está disfarçado ?  : " + rep.isDisfarcado()
+			);
+		}
+
+
 		if(entrada.equalsIgnoreCase("tamandua")) {
 			System.out.println("Nome: " + tb.getNome() + " | Tamanho: " + tb.getTamanhoMax() +
 			"\nExpc. Vida: " + tb.getExpcVida() + " | Peso Max: " + tb.getNome() + 
